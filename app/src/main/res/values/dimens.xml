@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_medium">15dp</dimen>
+    <dimen name="margin_text_edit">20dp</dimen>
+    <dimen name="image_width">100dp</dimen>
+    <dimen name="image_height">150dp</dimen>
+</resources>

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">UserInfo</string>
+    <string name="hint_user_s_full_name">User\'s Full Name</string>
+    <string name="hint_date_of_birthday">Date of Birthday</string>
+    <string name="hint_phone">Phone number</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_city">City</string>
+    <string name="hint_street">Street</string>
+    <string name="hint_latitude">Latitude</string>
+    <string name="hint_longitude">Longitude</string>
+    <string name="error_textview_stub">Error</string>
+    <string name="reload_button">Reload</string>
 </resources>
