@@ -2,7 +2,7 @@ package ru.testapplication.userinfo.viewmodel
 
 import io.reactivex.observers.DisposableObserver
 import ru.testapplication.userinfo.AppState
-import ru.testapplication.userinfo.data.DataSourceRemote
+import ru.testapplication.userinfo.data.remote.DataSourceRemote
 import ru.testapplication.userinfo.interactor.MainInteractor
 import ru.testapplication.userinfo.repository.RepoImpl
 

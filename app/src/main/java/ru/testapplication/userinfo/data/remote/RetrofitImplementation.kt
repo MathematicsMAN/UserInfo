@@ -1,4 +1,4 @@
-package ru.testapplication.userinfo.data
+package ru.testapplication.userinfo.data.remote
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import io.reactivex.Observable
@@ -9,6 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 import ru.testapplication.userinfo.BASE_API_URL
 import ru.testapplication.userinfo.DataSource
+import ru.testapplication.userinfo.data.UsersData
 
 class RetrofitImplementation : DataSource<UsersData> {
 

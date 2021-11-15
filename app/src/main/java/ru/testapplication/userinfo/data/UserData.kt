@@ -9,6 +9,8 @@ data class UserData(
     @Expose
     val location: Location,
     @Expose
+    val login: Login,
+    @Expose
     @SerializedName("dob")
     val dateOfBirthday: DateOfBirthday,
     @Expose
@@ -67,4 +69,9 @@ data class Picture(
     val medium: String,
     @Expose
     val thumbnail: String,
+)
+
+data class Login(
+    @Expose
+    val uuid: String
 )
