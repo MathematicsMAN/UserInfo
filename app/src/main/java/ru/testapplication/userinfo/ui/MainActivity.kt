@@ -12,6 +12,7 @@ import ru.testapplication.userinfo.R
 import ru.testapplication.userinfo.View
 import ru.testapplication.userinfo.data.UserData
 import ru.testapplication.userinfo.databinding.AcMainBinding
+import ru.testapplication.userinfo.ui.image.GlideImageLoader
 import ru.testapplication.userinfo.viewmodel.MainViewModel
 
 class MainActivity : BaseActivity<AppState>(), View {
@@ -80,7 +81,11 @@ class MainActivity : BaseActivity<AppState>(), View {
 
     @SuppressLint("SetTextI18n")
     private fun fillingForm(userData: UserData) {
-
+        val imageLoader: GlideImageLoader = GlideImageLoader()
+        imageLoader.loadTo(
+            userData.picture.large,
+            binding.image
+        )
         binding.textFullName.editText?.setText("${userData.name.first} ${userData.name.last}")
         binding.textDateOfBirthday.editText?.setText(getDate(userData.dateOfBirthday.date))
         binding.textPhoneNumber.editText?.setText(userData.phone)
