@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">UserInfo</string>
+
+    // Views strings
+    <string name="hint_user_s_full_name">User\'s Full Name</string>
+    <string name="hint_date_of_birthday">Date of Birthday</string>
+    <string name="hint_phone">Phone number</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_city">City</string>
+    <string name="hint_street">Street</string>
+    <string name="hint_latitude">Latitude</string>
+    <string name="hint_longitude">Longitude</string>
+
+    // UI messages
+    <string name="error_textview_stub">Error</string>
+    <string name="reload_button">Reload</string>
+    <string name="empty_server_response_on_success">Error</string>
+    <string name="undefined_error">Undefined error</string>
+    <string name="button_map">Map</string>
+    <string name="button_call">Call</string>
 </resources>
