@@ -1,4 +1,4 @@
-package ru.testapplication.userinfo
+package ru.testapplication.userinfo.data
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
@@ -23,7 +23,7 @@ data class Name(
     @Expose
     val first: String,
     @Expose
-    val last: String
+    val last: String,
 )
 
 data class Location(
@@ -34,30 +34,31 @@ data class Location(
     @Expose
     val country: String,
     @Expose
-    val coordinates: Coordinates
+    val coordinates: Coordinates,
 )
 
 data class HouseAddress(
     @Expose
     val number: Int,
     @Expose
-    val name: String
+    val name: String,
 )
 
 data class Coordinates(
     @Expose
+    @SerializedName("latitude")
     val lat: String,
     @Expose
-    val lon: String
+    @SerializedName("longitude")
+    val lon: String,
 )
 
 data class DateOfBirthday(
     @Expose
     val date: String,
     @Expose
-    val age: Int
+    val age: Int,
 )
-
 
 data class Picture(
     @Expose

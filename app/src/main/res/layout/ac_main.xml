@@ -58,15 +58,26 @@
                 style="@style/TextEditStyle"
                 android:hint="@string/hint_phone"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/image"
-                app:layout_constraintTop_toBottomOf="@+id/text_date_of_birthday"
-                app:startIconDrawable="@android:drawable/sym_call_outgoing">
+                app:layout_constraintStart_toEndOf="@+id/button_call"
+                app:layout_constraintTop_toBottomOf="@+id/text_date_of_birthday">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tool:text="+7-999-111-11-11" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_call"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:text="@string/button_call"
+                android:layout_height="wrap_content"
+                app:icon="@android:drawable/sym_call_outgoing"
+                app:layout_constraintBottom_toBottomOf="@id/text_phone_number"
+                app:layout_constraintEnd_toStartOf="@id/text_phone_number"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toTopOf="@id/text_phone_number" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/barrier_image_and_phone"
@@ -125,9 +136,8 @@
                 android:hint="@string/hint_latitude"
                 app:layout_constraintEnd_toStartOf="@+id/text_coordinate_longitude"
                 app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_street"
-                app:startIconDrawable="@android:drawable/ic_menu_mapmode">
+                app:layout_constraintStart_toEndOf="@id/button_map"
+                app:layout_constraintTop_toBottomOf="@+id/text_street">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -143,14 +153,25 @@
                 android:hint="@string/hint_longitude"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/text_coordinate_latitude"
-                app:layout_constraintTop_toBottomOf="@+id/text_street"
-                app:startIconDrawable="@android:drawable/ic_menu_mapmode">
+                app:layout_constraintTop_toBottomOf="@+id/text_street">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tool:text="100.0000" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_map"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_map"
+                app:icon="@android:drawable/ic_menu_mapmode"
+                app:layout_constraintBottom_toBottomOf="@id/text_coordinate_longitude"
+                app:layout_constraintEnd_toStartOf="@id/text_coordinate_latitude"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_coordinate_longitude" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

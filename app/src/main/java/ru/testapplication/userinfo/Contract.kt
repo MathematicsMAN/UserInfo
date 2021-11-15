@@ -1,33 +1,28 @@
 package ru.testapplication.userinfo
 
-import io.reactivex.rxjava3.core.Observable
+import io.reactivex.Observable
+import ru.testapplication.userinfo.data.UsersData
+
+const val BASE_API_URL = "https://randomuser.me/api/"
 
 sealed interface AppState {
-    data class Success(val data: List<UserData>): AppState
-    data class Error(val t: Throwable): AppState
-    data class Loading(val progress: Int? = null): AppState
+    data class Success(val data: UsersData) : AppState
+    data class Error(val t: Throwable) : AppState
+    data class Loading(val progress: Int? = null) : AppState
 }
 
 interface View {
     fun renderData(appState: AppState)
 }
 
-interface Presenter<T: AppState, V: View> {
-    fun attachView(view: V)
-
-    fun detachView(view: V)
-
-    fun getData(user: UserData, isOnline: Boolean)
-}
-
 interface Interactor<T> {
-    fun getData(user: UserData, isRemoteSource: Boolean): Observable<T>
+    fun getData(isRemoteSource: Boolean): Observable<T>
 }
 
 interface Repository<T> {
-    fun getData(user: UserData): Observable<T>
+    fun getData(): Observable<T>
 }
 
 interface DataSource<T> {
-    fun getData(user: UserData): Observable<T>
+    fun getData(): Observable<T>
 }
